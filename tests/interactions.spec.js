@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 test('date picker page opens', async ({ page }) => {
   await page.goto('/Datepicker.html');
 
-  await expect(page.locator('#datepicker')).toBeVisible();
+  await expect(page.locator('#datepicker2')).toBeVisible();
 });
 
 test('file upload control is available', async ({ page }) => {
@@ -13,10 +13,11 @@ test('file upload control is available', async ({ page }) => {
 });
 
 test('drag and drop page opens', async ({ page }) => {
-  await page.goto('/DragAndDrop.html');
+  await page.goto('/Static.html');
+  await expect(page.locator('#dragarea')).toBeVisible();
+  await expect(page.locator('#droparea')).toBeVisible();
 
-  await expect(page.locator('#draggable')).toBeVisible();
-  await expect(page.locator('#droppable')).toBeVisible();
+ 
 });
 
 test('switch to alert page opens', async ({ page }) => {
@@ -28,5 +29,5 @@ test('switch to alert page opens', async ({ page }) => {
 test('frames page opens', async ({ page }) => {
   await page.goto('/Frames.html');
 
-  await expect(page.locator('iframe')).toBeVisible();
+  await expect(page.locator('iframe[name="SingleFrame"]')).toBeVisible();
 });
