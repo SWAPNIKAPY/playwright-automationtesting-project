@@ -1,110 +1,117 @@
-# Playwright Automation – AutomationTesting Demo
+# Playwright Automation Testing Project
+
+Personal QA Automation portfolio project created using **Playwright with JavaScript** to practice and demonstrate web application testing concepts.
+
+The project uses the public **AutomationTesting.in** demo website and includes automated test scenarios covering common web application interactions and Playwright features.
+
+The project also demonstrates **API automation using Playwright** and **CI/CD integration for Playwright test execution using GitHub Actions**.
 
 Personal QA Automation portfolio project created with **Playwright + JavaScript** using the public Automation Testing demo website.
 
 ## Application under test
 
-https://demo.automationtesting.in/
 
-Main practice page:
+**Website:** https://demo.automationtesting.in/
 
-https://demo.automationtesting.in/Register.html
+**Main Practice Page:** https://demo.automationtesting.in/Register.html
 
-## What this project demonstrates
+The project uses the public AutomationTesting.in demo website for practicing and demonstrating Playwright automation concepts.
+## Tools & Technologies
 
-### Playwright web automation
-- Locators
-- Assertions
-- Text boxes and input fields
-- Radio buttons
-- Checkboxes
-- Dropdowns
-- Auto-complete
+- Playwright
+- JavaScript
+- Node.js
+- Git
+- GitHub
+- GitHub Actions
+## What I Automated
+
+- Registration form automation
+- Locators and assertions
+- Text box, radio button and checkbox interactions
+- Dropdown handling
+- Autocomplete functionality
 - Date picker
 - File upload
 - Alerts
-- Windows/tabs
 - Frames
 - Drag and drop
-- Mouse and keyboard actions
-- Screenshots and reports
+- API automation using Playwright
+- Automated test execution with GitHub Actions
 
-### Playwright API automation
-The API examples are kept separately because the AutomationTesting demo site is primarily a UI practice application. API automation is demonstrated using Playwright's `request` fixture against a public demo API.
-
-### CI/CD
-GitHub Actions runs the Playwright test suite automatically on pushes and pull requests.
-
-## Project structure
+## Project Structure
 
 ```text
-playwright-automationtesting-demo/
-├── .github/
-│   └── workflows/
-│       └── playwright.yml
+playwright-automationtesting-project/
+│
 ├── pages/
 │   └── RegisterPage.js
+│
 ├── tests/
 │   ├── register.spec.js
 │   ├── autocomplete.spec.js
 │   ├── interactions.spec.js
 │   └── api.spec.js
+│
+├── .github/
+│   └── workflows/
+│       └── playwright.yml
+│
 ├── playwright.config.js
 ├── package.json
+├── package-lock.json
+├── .gitignore
 └── README.md
-```
 
-## Run locally
+## How to Run
+
+### Install Dependencies
 
 ```bash
 npm install
-npx playwright install
-npm test
-```
 
-Run headed:
+## CI/CD with GitHub Actions
+
+GitHub Actions is configured to automatically execute the Playwright test suite when changes are pushed to the repository or when a pull request is created.
+
+The workflow:
+
+- Installs project dependencies
+- Installs Playwright browsers
+- Executes Playwright tests
+- Generates the Playwright test report
+- Uploads the test report as an artifact
+
+This demonstrates CI/CD integration specifically for Playwright test execution.
+
+## Test Reports
+
+Playwright generates an HTML test report after test execution.
+
+The report can be viewed locally using:
 
 ```bash
-npm run test:headed
-```
+npx playwright show-report
 
-View the HTML report:
-
-```bash
-npm run test:report
-```
-
-## CI/CD
-
-The GitHub Actions workflow:
-1. Checks out the repository.
-2. Installs Node.js dependencies.
-3. Installs Chromium for Playwright.
-4. Runs the Playwright test suite.
-5. Uploads the Playwright HTML report.
-
-## Interview-ready topics
-
-This project is designed to support discussion of the Playwright topics practiced by Swapnika, including:
+## Key Playwright Concepts Demonstrated
 
 - Locators
-- Web elements and actions
 - Assertions
-- Auto-waiting
-- Handling dropdowns, checkboxes and radio buttons
-- Alerts and browser events
-- Multiple pages/windows
-- Frames
-- File upload
-- Drag and drop
+- Web element interactions
+- Dropdowns, radio buttons and checkboxes
+- Autocomplete
 - Date picker
-- Fixtures
-- Page Object Model
-- API automation with Playwright
-- Playwright configuration
-- Git/GitHub
-- CI/CD with GitHub Actions
+- File upload
+- Alerts
+- Frames
+- Drag and drop
+- Page Object Model (POM)
+- API automation using Playwright
+- Git and GitHub
+- CI/CD integration for Playwright using GitHub Actions
 
-## Important
+## Important Note
 
-This is a personal practice/portfolio project. It contains no company source code, credentials, private test data or confidential information.
+This is a personal Playwright practice and portfolio project created using a public demo website.
+
+No company source code, confidential information, or proprietary test data is included in this repository.
