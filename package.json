@@ -1,0 +1,14 @@
+{
+  "name": "swapnika-playwright-automationtesting-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal Playwright automation portfolio based on the Automation Testing demo website.",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:report": "npx playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0"
+  }
+}
