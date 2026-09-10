@@ -1,11 +1,11 @@
 export class RegisterPage {
   constructor(page) {
     this.page = page;
-    this.firstName = page.locator('#FirstName');
-    this.lastName = page.locator('#LastName');
-    this.address = page.locator('#Address');
-    this.email = page.locator('#Email');
-    this.phone = page.locator('#Phone');
+    this.firstName = page.getByPlaceholder('First Name');
+    this.lastName = page.getByPlaceholder('Last Name');
+    this.address = page.locator('textarea');
+    this.email = page.locator('//div/input[@type="email"]');
+    this.phone = page.locator('//div/input[@type="tel"]');
     this.male = page.locator('input[value="Male"]');
     this.female = page.locator('input[value="FeMale"]');
     this.hobbiesCricket = page.locator('#checkbox1');

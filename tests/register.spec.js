@@ -3,7 +3,7 @@ import { RegisterPage } from '../pages/RegisterPage.js';
 
 test.describe('AutomationTesting Register Page', () => {
   test('register page loads successfully', async ({ page }) => {
-    registerPage = new RegisterPage(page);
+    let registerPage = new RegisterPage(page);
 
     await registerPage.open();
 
@@ -13,7 +13,7 @@ test.describe('AutomationTesting Register Page', () => {
   });
 
   test('can enter registration details and select controls', async ({ page }) => {
-    registerPage = new RegisterPage(page);
+    let registerPage = new RegisterPage(page);
 
     await registerPage.open();
     await registerPage.enterBasicDetails();
